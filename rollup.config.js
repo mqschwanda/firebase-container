@@ -5,13 +5,15 @@ export default {
   plugins: [
     babel(),
   ],
-  format: 'umd',
-  // bundle options would need to go here too
   output: {
     file: 'dist/index.js',
     name: '@mqschwanda/firebase-container',
     exports: 'named',
-    sourceMap: true
+    format: 'umd',
+    sourceMap: true,
+    globals: {
+      'react': 'React',
+    },
   },
 
   // Rollup will only resolve relative module IDs by default. This means that an
@@ -23,7 +25,4 @@ export default {
   external: [
     'react', // <-- suppresses the warning
   ],
-  globals: {
-    'react': 'React',
-  },
 }

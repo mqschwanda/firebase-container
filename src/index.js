@@ -47,5 +47,3 @@ export const firestoreContainer = (doc, mapQuerySnapshot = defaultMapQuerySnapsh
         : <LoadingComponent />;
     }
   }
-
-export default firestoreContainer;
